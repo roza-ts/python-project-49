@@ -1,5 +1,6 @@
 import random
 import prompt
+import operator
 
 
 def welcome_user():
@@ -8,21 +9,19 @@ def welcome_user():
     return name
 
 
-def is_even(num):
-    return 'yes' if int(num) % 2 == 0 else 'no'
-
-
 def main():
     print('Welcome to the Brain Games!')
     name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
 
     for _ in range(3):
-        number = random.randint(-100, 1000)
+        operators = {'+': operator.add, '-': operator.sub, '*': operator.mul}
+        a, b = random.randint(0, 10), random.randint(0, 10)
+        op = random.choice(('+', '-', '*'))
 
-        print('Question:', number)
-        answer = input('Your answer: ')
-        correct_answer = is_even(number)
+        print('Question:', f'{a} {op} {b}')
+        answer = int(input('Your answer: '))
+        correct_answer = operators[op](a, b)
 
         if answer == correct_answer:
             print('Correct!')
@@ -36,3 +35,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
