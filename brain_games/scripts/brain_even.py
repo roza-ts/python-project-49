@@ -1,3 +1,4 @@
+import random
 import prompt
 
 
@@ -16,12 +17,14 @@ def main():
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for _ in range(3):
-        question = input('Question: ')
+        number = random.randint(-100, 1000)
+        print('Question:', number)
         answer = input('Your answer: ')
-        if answer == is_even(question):
+        correct_answer = is_even(number)
+        if answer == correct_answer:
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{is_even(question)}'.")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             break
     else:
@@ -29,4 +32,4 @@ def main():
 
 
 if __name__ == '__main__':
-	main()
+    main()
