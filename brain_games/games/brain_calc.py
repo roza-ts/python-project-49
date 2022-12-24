@@ -7,12 +7,17 @@ def task():
 
 
 def result():
-    """Returns tuple that contains random expression and result of it"""
+    """Returns tuple that contains random expression and value of it"""
 
     a, b = randint(0, 10), randint(0, 10)
-    opr = choice(('+', '-', '*'))
-    operators = {'+': operator.add, '-': operator.sub, '*': operator.mul}
+    opr = choice(('+', '-', '*'))    
+    return f'{a} {opr} {b}', str(evaluate(a, b, opr))
 
-    return f'{a} {opr} {b}', str(operators[opr](a, b))
+
+def evaluate(a, b, opr):
+    """Evaluates the value of the expression"""
+
+    operators = {'+': operator.add, '-': operator.sub, '*': operator.mul}
+    return operators[opr](a, b)
 
 

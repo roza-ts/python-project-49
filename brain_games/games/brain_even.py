@@ -9,5 +9,10 @@ def result():
     """Returns tuple that contains random number and word "yes" if it's even and word "no" if it's not"""
 
     number = randint(-100, 100)
+    return number, 'yes' if is_even(number) else 'no'
 
-    return number, 'yes' if int(number) % 2 == 0 else 'no'
+
+def is_even(number):
+    """Reports if number is even"""
+
+    return int(number) % 2 == 0

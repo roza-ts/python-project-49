@@ -16,10 +16,10 @@ def result():
     index = randrange(len(progression))
     number = progression.pop(index)
     progression.insert(index, '..')
-    str_progression = ' '.join(str(num) for num in progression)
+    string_progression = ' '.join(str(num) for num in progression)
     
 #number = progression[index] 
 #progression[index] = '..'
 
-    return f'{str_progression}', str(number)
+    return f'{string_progression}', str(number)
     
