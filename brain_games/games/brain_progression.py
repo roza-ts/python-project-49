@@ -6,7 +6,7 @@ def task():
 
 
 def result():
-    """Returns tuple that contains progression with missing number and this number"""
+    """Returns tuple that contains progression with missing number and this number"""  # noqa
 
     start = randrange(51)
     step = randrange(1, 6)

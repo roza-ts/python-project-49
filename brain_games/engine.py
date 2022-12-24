@@ -10,7 +10,7 @@ def welcome_user():
 
 
 def game(task, first, second, third):
-    """Greets user, gives task, accepts answer, compares answer with correct answer. """
+    """Greets user, gives task, accepts answer, compares answer with correct answer. """  # noqa
     NAME = welcome_user()
     print(task)
     for tup in (first, second, third):
@@ -20,8 +20,8 @@ def game(task, first, second, third):
         if answer == correct_answer:
             print('Correct!')
         else:
-            print(f''''{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.
-Let's try again, {NAME}!''')
+            print(f''''{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.  
+Let's try again, {NAME}!''')  # noqa
             break
     else:
         print(f'Congratulations, {NAME}!')

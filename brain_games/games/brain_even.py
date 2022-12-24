@@ -6,7 +6,7 @@ def task():
 
 
 def result():
-    """Returns tuple that contains random number and word "yes" if it's even and word "no" if it's not"""
+    """Returns tuple that contains random number and word "yes" if it's even and word "no" if it's not"""  # noqa
 
     number = randint(-100, 100)
     return number, 'yes' if is_even(number) else 'no'

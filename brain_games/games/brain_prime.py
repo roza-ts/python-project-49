@@ -6,7 +6,7 @@ def task():
 
 
 def result():
-    """Returns tuple that contains random number and word "yes" if it's prime and word "not" if it's not"""
+    """Returns tuple that contains random number and word "yes" if it's prime and word "not" if it's not"""  # noqa
 
     number = randint(1, 100)
     return number, 'yes' if is_prime(number) else 'no'
@@ -14,7 +14,7 @@ def result():
 
 def is_prime(number):
     """Reports if number is prime"""
-    
+
     if number == 1:
         return False
     for num in range(2, number):

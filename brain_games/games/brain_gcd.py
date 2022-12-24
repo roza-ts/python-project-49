@@ -6,7 +6,7 @@ def task():
 
 
 def result():
-    """Returns tuple that contains two random numbers and the greatest common divisor of these numbers"""
+    """Returns tuple that contains two random numbers and the greatest common divisor of these numbers"""  # noqa
 
     a, b = randint(0, 10), randint(0, 10)
     return f'{a} {b}', str(greatest_common_divisor(a, b))
