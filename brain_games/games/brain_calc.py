@@ -10,7 +10,7 @@ def result():
     """Returns tuple that contains random expression and value of it"""
 
     a, b = randint(0, 10), randint(0, 10)
-    opr = choice(('+', '-', '*'))    
+    opr = choice(('+', '-', '*'))
     return f'{a} {opr} {b}', str(evaluate(a, b, opr))
 
 
@@ -19,5 +19,3 @@ def evaluate(a, b, opr):
 
     operators = {'+': operator.add, '-': operator.sub, '*': operator.mul}
     return operators[opr](a, b)
-
-

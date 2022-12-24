@@ -1,4 +1,4 @@
-from random import randrange, choice
+from random import randrange
 
 
 def task():
@@ -7,7 +7,7 @@ def task():
 
 def result():
     """Returns tuple that contains progression with missing number and this number"""
-    
+
     start = randrange(51)
     step = randrange(1, 6)
     end = start + step * 10
@@ -17,9 +17,8 @@ def result():
     number = progression.pop(index)
     progression.insert(index, '..')
     string_progression = ' '.join(str(num) for num in progression)
-    
-#number = progression[index] 
-#progression[index] = '..'
+
+# number = progression[index]
+# progression[index] = '..'
 
     return f'{string_progression}', str(number)
-    

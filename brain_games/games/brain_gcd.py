@@ -19,5 +19,3 @@ def greatest_common_divisor(a, b):
     for num in range(end, 0, -1):
         if a % num == 0 and b % num == 0:
             return num
-
-
