@@ -10,8 +10,10 @@ def result():
 
     a, b = randint(0, 10), randint(0, 10)
     end = abs((a, b)[abs(a) < abs(b)])
+
     for num in range(end, 0, -1):
         if a % num == 0 and b % num == 0:
+
             return f'{a} {b}', str(num)
 
 

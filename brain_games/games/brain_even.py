@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 
 def task():
@@ -6,6 +6,8 @@ def task():
 
 
 def result():
-    """Returns tuple that contains random number and word 'yes' if it's even, word 'no' if it's not'"""
-    number = random.randint(-100, 100)
+    """Returns tuple that contains random number and word "yes" if it's even and word "no" if it's not"""
+
+    number = randint(-100, 100)
+
     return number, 'yes' if int(number) % 2 == 0 else 'no'
