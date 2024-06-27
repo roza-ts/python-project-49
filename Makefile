@@ -1,3 +1,6 @@
+brain-calc:
+	poetry run brain-calc
+
 brain-even:
 	poetry run brain-even
 
