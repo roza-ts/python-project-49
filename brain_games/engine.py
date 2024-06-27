@@ -1,38 +1,31 @@
+import brain_games.games.brain_calc
+import brain_games.games.brain_even
 import prompt
-from random import choice
 
 
-def game():
+def action(what_game):    
     name = welcome_user()
-    print(game_even(name))
+    print(what_game.task())
 
-    
-def game_even(name):
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    
     for _ in range(3):
-        num = choice(range(0, 1001))
-        right_answer = ('no', 'yes')[is_even(num)]
-        answer = input(f'''Question: {num}
-Your answer: ''')
-        if answer != right_answer:
-            return f"""'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.
-Let's try again, {name}!"""
-        else: 
+        fill, right_answer = what_game.game()
+        our_answer = answer(fill)
+        if our_answer == right_answer:
             print('Correct!')
-    return f'Congratulations, {name}!'
-        
+        else:
+            return f"""'{our_answer}' is wrong answer ;(. Correct answer was '{right_answer}'. 
+Let's try again, {name}!"""
 
+    return f'Congratulations, {name}!'
 
 
 def welcome_user():
-    print('Welcome to the Brain Games!')
+    print('Welcome to the Brain games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     return name
 
 
-def is_even(number):
-    return number % 2 == 0
-
-
+def answer(fill):
+    return input(f'''Question: {fill}
+Your answer: ''')
