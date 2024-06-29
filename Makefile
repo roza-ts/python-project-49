@@ -7,6 +7,9 @@ brain-even:
 brain-games:
 	poetry run brain-games
 
+brain-gcd:
+	poetry run brain-gcd
+
 build:
 	poetry build
 
