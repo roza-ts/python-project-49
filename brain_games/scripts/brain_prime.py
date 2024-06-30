@@ -6,8 +6,8 @@ import brain_games.engine
 
 
 def main():
-	print(brain_games.engine.action(brain_games.games.brain_prime))
+    print(brain_games.engine.action(brain_games.games.brain_prime))
 
 
 if __name__ == '__main__':
-	main()
+    main()

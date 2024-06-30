@@ -5,7 +5,7 @@ def task():
     return 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def game(): 
+def game():
     num = randint(0, 11)
     return num, ('no', 'yes')[is_prime(num)]
 

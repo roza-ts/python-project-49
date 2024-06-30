@@ -6,7 +6,7 @@ def task():
 
 
 def game():
-    num = choice(range(0, 1001))  
+    num = choice(range(0, 1001))
     return num, ('no', 'yes')[is_even(num)]
 
 

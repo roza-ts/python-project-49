@@ -1,12 +1,12 @@
 from random import choice
-      
+
 
 def task():
     return 'What number is missing in the progression?'
 
 
-def game(): 
-    num1 = choice(range(1, 21))   
+def game():
+    num1 = choice(range(1, 21))
     return get_question_and_answer(get_progression(num1))
 
 

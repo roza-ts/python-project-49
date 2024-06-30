@@ -1,12 +1,7 @@
-import brain_games.games.brain_calc
-import brain_games.games.brain_even
-import brain_games.games.brain_gcd
-import brain_games.games.brain_prime
-import brain_games.games.brain_progression
 import prompt
 
 
-def action(what_game):    
+def action(what_game):
     name = welcome_user()
     print(what_game.task())
 
@@ -16,8 +11,8 @@ def action(what_game):
         if our_answer == right_answer:
             print('Correct!')
         else:
-            return f"""'{our_answer}' is wrong answer ;(. Correct answer was '{right_answer}'. 
-Let's try again, {name}!"""
+            return f"""'{our_answer}' is wrong answer ;(. Correct answer was '{right_answer}'.
+Let's try again, {name}!""" # noqa
 
     return f'Congratulations, {name}!'
 
