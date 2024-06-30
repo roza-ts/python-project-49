@@ -1,6 +1,7 @@
 import brain_games.games.brain_calc
 import brain_games.games.brain_even
 import brain_games.games.brain_gcd
+import brain_games.games.brain_prime
 import brain_games.games.brain_progression
 import prompt
 
