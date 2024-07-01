@@ -1,12 +1,24 @@
 #!/usr/bin/env python3
 
 
+#import brain_games.games.brain_even
+#import brain_games.engine
+
+
+#def main():
+ #   print(brain_games.engine.action(brain_games.games.brain_even))
+
+
+#if __name__ == '__main__':
+  #  main()
+
+
 import brain_games.games.brain_even
-import brain_games.engine
+import brain_games.engine_copy
 
 
 def main():
-    print(brain_games.engine.action(brain_games.games.brain_even))
+    brain_games.engine_copy.begin(brain_games.games.brain_even)
 
 
 if __name__ == '__main__':
