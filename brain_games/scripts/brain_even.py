@@ -14,11 +14,11 @@
 
 
 import brain_games.games.brain_even
-import brain_games.engine_copy
+import brain_games.engine
 
 
-def main():
-    brain_games.engine_copy.begin(brain_games.games.brain_even)
+def main():    
+    brain_games.engine.begin(brain_games.games.brain_even)
 
 
 if __name__ == '__main__':

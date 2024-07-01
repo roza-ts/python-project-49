@@ -1,10 +1,13 @@
 import prompt
 
 
+def begin(game):
+    print(action(game))
+
+
 def action(what_game):
     name = welcome_user()
     print(what_game.task())
-
     for _ in range(3):
         fill, right_answer = what_game.game()
         our_answer = answer(fill)
@@ -13,7 +16,6 @@ def action(what_game):
         else:
             return f"""'{our_answer}' is wrong answer ;(. Correct answer was '{right_answer}'.
 Let's try again, {name}!""" # noqa
-
     return f'Congratulations, {name}!'
 
 
