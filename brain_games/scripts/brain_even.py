@@ -2,11 +2,11 @@
 
 
 import brain_games.games.brain_even
-import brain_games.engine
+from brain_games.engine import begin
 
 
 def main():
-    brain_games.engine.begin(brain_games.games.brain_even)
+    begin(brain_games.games.brain_even)
 
 
 if __name__ == '__main__':
